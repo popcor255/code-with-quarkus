@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-world-quarkus
+  labels:
+    name: hello-world-quarkus
+spec:
+  containers:
+  - name: hello-world-quarkus
+    image: popcor255/hello-world-quarkus
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - name: http
+        containerPort: 8080
